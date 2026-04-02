@@ -1,0 +1,75 @@
+{
+  "db": "PostgreSQL",
+  "22f8eccf996d3b2bc62ae91e385d67a784a9fef14eb72ee082df479a775ebb5a": {
+    "query": "delete from proposal_head WHERE uuid = ANY($1)",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Left": [
+          "UuidArray"
+        ]
+      },
+      "nullable": []
+    }
+  },
+  "39e1d336767aab26a6daf849357ab3f71234fa0225d192c075949aa59d4e2b76": {
+    "query": "delete from request_partner WHERE supplier_uuid = ANY($1)",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Left": [
+          "UuidArray"
+        ]
+      },
+      "nullable": []
+    }
+  },
+  "6a51774c1518adb20b7b2219510baae54f31d44282b2eabb7f6243324827dbc4": {
+    "query": "delete from attachment_object WHERE uuid_doc = ANY($1)",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Left": [
+          "UuidArray"
+        ]
+      },
+      "nullable": []
+    }
+  },
+  "81fa3476ed55aa4e02d48c9a6501282e3c9e901e7cdbc47375a118bd4bec32da": {
+    "query": "delete from request_head WHERE uuid = ANY($1)",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Left": [
+          "UuidArray"
+        ]
+      },
+      "nullable": []
+    }
+  },
+  "9c72b2af05995d3f9cdf5b752d2f3fd3b051d6d13b7667b73ccb13d710def094": {
+    "query": "delete from request_item WHERE uuid = ANY($1)",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Left": [
+          "UuidArray"
+        ]
+      },
+      "nullable": []
+    }
+  },
+  "af43505bbb3a5a7343a3e4ac3874bc06c8655a784de2862f6d7f5a19746a7d87": {
+    "query": "delete from proposal_item WHERE uuid = ANY($1)",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Left": [
+          "UuidArray"
+        ]
+      },
+      "nullable": []
+    }
+  }
+}

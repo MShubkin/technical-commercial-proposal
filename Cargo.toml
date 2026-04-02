@@ -1,0 +1,53 @@
+
+[package]
+name = "technical-commercial-proposal"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+#local
+asez2-shared-db = { path = "../shared/shared-db" }
+broker = {path = "../shared/broker", features = ["traces"]}
+env-setup = { path = "../shared/env-setup" }
+http-middleware = { path = "../shared/http-middleware" }
+igg-tracing = { path = "../shared/igg-tracing" }
+rabbit-services = { path = "../shared/rabbit-services", features = [
+  "view-storage",
+  "processing",
+  "master-data",
+  "integration",
+  "print-doc"
+] }
+monolith-service = { path = "../shared/monolith-service" }
+shared-db-derive = { path = "../shared/shared-db-derive" }
+shared-essential = { path = "../shared/shared-essential" }
+testing = { path = "../shared/testing", features = ["monolith"]}
+trace-setup = { path = "../shared/trace-setup" }
+
+# foreign
+actix-cors.workspace = true
+actix-web.workspace = true
+ahash.workspace = true
+amqprs.workspace = true
+async-trait.workspace = true
+futures.workspace = true
+itertools.workspace = true
+either.workspace = true
+log.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sqlx.workspace = true
+time.workspace = true
+tokio.workspace = true
+uuid.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tracing-actix-web.workspace = true
+url.workspace = true
+humantime.workspace = true
+
+[dev-dependencies]
+hyper.workspace = true
+
+[features]
+integration_tests = []
