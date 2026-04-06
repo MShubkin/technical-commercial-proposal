@@ -240,7 +240,3 @@ cargo build -p technical-commercial-proposal --release --locked
 | `GET /monitoring/config` | Текущая конфигурация сервера      |
 
 ---
-
-## Авторы
-
-Nikolay Galko, Ibragim Kusov
